@@ -1,0 +1,353 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+
+@font-face {
+    font-family: Acumin;
+    font-weight: bold;
+    src: url("Acumin-BdPro.otf") format("opentype");
+}
+
+#app-container {
+    width: 100%;
+    max-width: none; /* Asegura que ocupe todo el ancho disponible */
+    display: flex; /* Añadido para habilitar el diseño de columna con flexbox */
+    padding: 20px; /* Espaciado general del contenedor */
+}
+
+body {
+    background-color: #2b303d; /* Fondo principal más oscuro como en la primera imagen */
+    color: #e0e6ed; /* Color de texto general claro */
+    font-size: 15px;
+    margin: 0px;
+    font-family: "Open Sans", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+    margin: 0.3rem 0rem;
+    border-color: #7C7C7C; /* Color gris para la línea horizontal */
+}
+
+/* Banner original, no relevante para este dashboard específico si no lo usas */
+.banner {
+    height: 5.5rem;
+    padding: 0rem 2rem 0rem;
+    background-color: #1f2630;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.banner Img {
+    position: relative;
+    height: 3rem;
+    width: auto;
+    margin-left: 2%;
+}
+
+H5 {
+    color: #7fafdf; /* Mantener tu color original para H5 si lo usas */
+    font-weight: 300;
+}
+
+H5, H3 {
+    /*font-family: Acumin, "Helvetica Neue", sans-serif;*/
+    font-family: "Playfair Display", sans-serif;
+}
+
+#left-column {
+    background-color: #2b303d; /* Fondo de la columna izquierda, igual que el body */
+    margin-top: 20px; /* Espaciado superior */
+    padding: 20px; /* Padding ajustado para coincidir con la primera imagen */
+    display: flex;
+    flex-direction: column;
+    flex: 4; /* Para el diseño de dos columnas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+    margin-right: 20px; /* Espacio entre columnas */
+}
+
+#right-column {
+    margin-top: 20px; /* Espaciado superior */
+    background-color: #2b303d; /* Fondo de la columna derecha, igual que el body */
+    padding: 20px; /* Padding ajustado */
+    flex: 8; /* Para el diseño de dos columnas */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra */
+}
+
+.table-row { /* Mantener si usas tablas */
+    height: 63px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.wait_time_graph > div, .patient_score_graph > div { /* Mantener si usas estos elementos */
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.draglayer { /* Mantener si usas esto */
+    cursor: pointer !important;
+}
+
+#intro {
+    border-left: #2cfec1 solid 1rem; /* Borde verde brillante, como en la primera imagen */
+    text-align: justify;
+    padding-left: 1rem;
+    max-width: 100rem;
+    margin: 2rem 0 3rem 0; /* Espaciado */
+    color: #e0e6ed; /* Color de texto del intro */
+}
+
+#description-card h3 {
+    color: #2cfec1; /* Título principal verde brillante */
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+#control-card > p {
+    font-weight: bold;
+    color: #e0e6ed; /* Color para los textos de los controles */
+}
+
+#model_graph, #cpd_card {
+    background-color: #2b303d; /* Fondo de la gráfica y la tarjeta, igual que el body */
+    padding: 1rem;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#control-card {
+    background-color: #2b303d; /* Fondo de la tarjeta de control, igual que el body */
+}
+
+#model_graph > b, #cpd_card > b {
+    line-height: 2.5;
+    color: #e0e6ed; /* Color blanco para el título de la gráfica */
+}
+
+#cpd_card { /* Mantener si usas esto */
+    margin: 20px 0px;
+}
+
+#patient_volume_hm { /* Mantener si usas esto */
+    height: 400px;
+}
+
+.table-row:nth-child(even) { /* Mantener si usas tablas */
+    background-color: #f2f2f2;
+}
+
+.row-department > b { /* Mantener si usas esto */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#header_wait_time_min, #header_care_score { /* Mantener si usas esto */
+    display: table;
+}
+
+#header_wait_time_min > b, #header_care_score > b { /* Mantener si usas esto */
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Dropdown */
+.Select-control {
+    background-color: #3b404d !important; /* Fondo del dropdown */
+    border: 1px solid #4a5061 !important; /* Borde del dropdown */
+    color: #e0e6ed !important; /* Color de texto */
+    border-radius: 4px !important; /* Bordes redondeados */
+}
+
+.Select-value-label {
+    color: #e0e6ed !important; /* Color del texto seleccionado */
+}
+
+.Select-menu-outer {
+    background-color: #3b404d !important; /* Fondo del menú desplegable */
+    border: 1px solid #4a5061 !important; /* Borde del menú desplegable */
+}
+
+.Select-option {
+    background-color: #3b404d !important; /* Fondo de las opciones */
+    color: #e0e6ed !important; /* Color del texto de las opciones */
+}
+
+.Select-option.is-focused {
+    background-color: #4a5061 !important; /* Fondo de la opción al pasar el ratón */
+    color: #e0e6ed !important;
+}
+
+.Select-option.is-selected {
+    background-color: #2cfec1 !important; /* Fondo de la opción seleccionada */
+    color: #2b303d !important; /* Color de texto de la opción seleccionada */
+}
+
+.Select-arrow {
+    border-color: #e0e6ed transparent transparent !important; /* Color de la flecha del dropdown */
+}
+
+/* Date picker*/
+.DateInput_input, .DateInput_input_1 {
+    height: 34px !important;
+    width: 100% !important;
+    border-radius: 4px !important; /* Bordes redondeados */
+    background-color: #3b404d !important; /* Fondo del input de fecha */
+    color: #e0e6ed !important; /* Color de texto del input */
+    border: 1px solid #4a5061 !important; /* Borde del input */
+}
+
+.SingleDatePickerInput__withBorder {
+    border-radius: 4px !important; /* Ajuste para el contenedor del datepicker */
+    border: 1px solid #4a5061 !important;
+    background-color: #3b404d !important;
+}
+
+.DateInput_input__focused {
+    border-color: #2cfec1 !important; /* Borde al enfocar el input */
+}
+
+.SingleDatePicker_picker {
+    background-color: #3b404d !important; /* Fondo del calendario */
+    border: 1px solid #4a5061 !important;
+}
+
+.CalendarMonth_caption {
+    color: #e0e6ed !important; /* Color del mes en el calendario */
+}
+
+.CalendarDay__default {
+    color: #e0e6ed !important;
+    background-color: #3b404d !important; /* Color de los días en el calendario */
+}
+
+.CalendarDay__selected,
+.CalendarDay__selected:hover {
+    background-color: #2cfec1 !important; /* Día seleccionado */
+    color: #2b303d !important;
+}
+
+.CalendarDay__hovered_offset,
+.CalendarDay__hovered_offset:hover {
+    background-color: #4a5061 !important; /* Día al pasar el ratón */
+}
+
+/* Slider */
+/* Asegúrate de que el ID o clase del contenedor del slider sea el correcto.
+   Según tu app.py, el contenedor del slider es `id="campo-slider"`. */
+#campo-slider {
+    background-color: #2b303d; /* Mismo fondo que la columna */
+    padding: 1rem 1rem 1rem 1rem; /* Ajustado el padding */
+}
+
+.rc-slider-track {
+    background-color: #2cfec1 !important; /* Barra de progreso del slider (verde brillante) */
+}
+
+.rc-slider-handle {
+    border-color: #2cfec1 !important; /* Borde del "pulgar" del slider */
+    background-color: #2cfec1 !important; /* Color del "pulgar" del slider */
+}
+
+.rc-slider-rail {
+    background-color: #4a5061 !important; /* Fondo de la barra del slider */
+}
+
+.rc-slider-tooltip-inner {
+    background-color: #2cfec1 !important; /* Fondo del tooltip del slider */
+    color: #2b303d !important; /* Color de texto del tooltip */
+    border-radius: 4px;
+}
+
+.rc-slider-mark-text {
+    color: #e0e6ed !important; /* Color del texto de las marcas del slider */
+}
+
+/* Ajuste para el texto de la leyenda de la gráfica */
+.g-gtitle {
+    color: #e0e6ed !important; /* Asegura que el título de la leyenda sea claro */
+}
+
+/* Ajuste para el texto de los ejes si es necesario */
+.xtick text, .ytick text {
+    fill: #e0e6ed !important;
+}
+
+/* Pequeño ajuste para el hover en las líneas de la gráfica */
+.legendtoggle {
+    fill: #e0e6ed !important;
+}
+
+/*
+ ##Media Queries (Mantener tus responsive designs)
+ */
+
+@media only screen and (max-width: 750px), screen and (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        font-size: 13px;
+        margin: 0px;
+    }
+
+    .banner {
+        height: 6rem;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #intro {
+        margin: 10px 0px;
+    }
+
+    #left-column, #right-column {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    #right-column {
+        padding: 0rem 0.5rem;
+    }
+
+    #reset-btn-outer {
+        text-align: center;
+    }
+
+    .table-row > div {
+        width: 100% !important;
+        text-align: center;
+        margin: auto;
+    }
+
+    .table-row:nth-child(even), .table-row:nth-child(odd) {
+        background-color: #FFFFFF; /* Esto hará que las filas de la tabla sean blancas en móvil, ajusta si es necesario */
+    }
+
+    #header {
+        display: none;
+    }
+
+    #wait_time_table:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    #model_graph > b, #cpd_card > b {
+        line-height: 2.5;
+        font-size: 13px;
+        display: block;
+        text-align: center;
+    }
+
+    .annotation-text {
+        font-size: 0.8rem !important;
+    }
+}
